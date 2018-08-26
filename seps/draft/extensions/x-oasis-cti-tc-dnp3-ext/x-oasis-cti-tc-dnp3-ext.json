@@ -13,6 +13,10 @@
           "type": "integer",
           "description": "The function code from the Application Layer."
         },
+        "sep_version": {
+          "type": "integer",
+          "description": "The version of this SEP."
+        },
         "objects": {
           "type": "array",
           "items": {
@@ -86,7 +90,8 @@
         }
       },
       "required": [
-        "func_code"
+        "func_code",
+        "sep_version"
       ]
     }
   },
@@ -96,11 +101,11 @@
       "properties": {
         "group": {
           "type": "integer",
-          "description": "The function code from the Application Layer."
+          "description": "The object group from the Object Type Field."
         },
         "variant": {
           "type": "integer",
-          "description": "The defines the included objects in the Application Layer."
+          "description": "The object variation from the Object Type Field."
         },
         "bitstr_hex": {
           "$ref": "../../../../cti-stix2-json-schemas/schemas/common/hex.json",
